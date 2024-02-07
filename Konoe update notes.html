@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="baseStyle.css" />
+  </head>
+  <body>
+    <header>
+      <a href="home.html"
+        ><img id="topLogoImg" src="medias/Irrelevant's_mainLogo.png"
+      /></a>
+    </header>
+
+    <div id="Konoeのベース仕様ノートが公開" class="newsBody">
+      <h2>Konoeのベース仕様ノートが公開。</h2>
+      <img
+        class="thumbnail"
+        src="thumbnail/公開されたKonoeのベース設定ノートの一部.jpg"
+        alt=""
+      />
+      <p>
+        昨年末から開発が始まっている一人人狼ゲームKonoeの土台となる設定が載ったベース仕様ノートが、元旦にチームIRRELEVANTからパブリックで公開された。<br />公開されているノートには、推理に必要な情報の種類やキャラクター名、その能力と背景などが掲載されている。<br />数多く存在する人狼ゲームの中でも珍しい一人プレイ向けということで、多数の界隈から注目を集めている。
+      </p>
+    </div>
+
+    <div id="【メディア】Konoeベース仕様ノート V-b.01" class="newsBody">
+      <h2>
+        <span class="green">【メディア】</span>Konoeベース仕様ノート V-b.01
+      </h2>
+      <!-- <img class="thumbnail" src="" alt="" /> -->
+      <div class="codeWindow">
+        死因:刺殺 or 毒殺<br />
+        死亡時刻:朝 or 昼 or 夜(うち2つ)<br /><br />☆生存者の特性<br />犯行可能凶器:ナイフ
+        or 毒薬<br />精神状態:正常 or 異常(虚偽の発言をする(嘘では無い))<br />アリバイ:朝
+        or 昼 or 夜(0~1つ)<br />陣営:殺人鬼 or 一般人<br />(殺人鬼陣営:殺人鬼(犯人)
+        or 黒馬(嘘つき))<br />(一般人陣営:一般人(普通) or 目撃者(真偽逆発言) or
+        臆病者(発言不可))<br /><br />☆キャラ 探偵(プレイヤー)<br />John:被害者の死因を診断できる<br />
+        解剖医らしき男。いつでも白衣をまとい彼は毒にも薬にもなると言う液体の入った瓶を持ち歩いている。<br /><br />
+        Poirot:死亡時刻を凡そ特定できる<br />
+        元警官と言う男。古びたロングコートがお気に入りで、護身用のナイフを彼は欠かさないらしい。<br /><br />
+        Adams:生存者一名の精神状態を診断できる<br />
+        自称精神科医の男。ピエロのような見た目で精神を安定させるためだと言う錠剤を見せてくれた。<br /><br />
+        George:生存者一名の陣営を特定できる<br />
+        元占い師だったと言う彼は話す相手の背景を知っていたかのように読み取れる。手品用の小さなナイフは親の形見だとか。<br /><br />
+        Melania:生存者一名が嘘をついたかわかる<br />
+        教師をしていると言う彼女は人の嘘を見抜けるらしい。派手でお世辞にもお洒落とは言えない服の隙間からは薬瓶が見える。<br /><br />
+        Oda:臆病者の場合のみ死亡する<br />
+        日系の顔立ちが目立つ彼は一見気が強そうだが常に周りに怯えている。和服を身に纏う彼の懐には小刀が入っている。<br /><br />
+        Zodiac:目撃者の場合のみ死亡する<br />
+        まだ学生だと言う青年。ショックには耐えられない性格で精神安定剤だと言う薬を持ち歩いていると彼は言う。<br /><br />V-b.01
+      </div>
+    </div>
+
+    <div id="Konoe beta version development has begun." class="newsBody">
+      <h2>Konoe beta version development has begun.</h2>
+      <img class="thumbnail" src="thumbnail/Konoe'sLogoVerBeta.png" alt="" />
+      <p>
+        12月上旬、チームIRRELEVANTが一人向け人狼ゲームKonoe（元：一人人狼(仮)）の開発開始を発表した。チームIRRELEVANTの開発するゲームとしては一作目であり、立案のリーク情報などから人狼ゲームファンからは注目が集まっている。<br />Konoeベータ版のリリースは来年年内を予定。
+      </p>
+    </div>
+    <footer><p>Copyright © 2023 by Team IRRELEVANT</p></footer>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      jQuery(function () {
+        var windowWidth = $(window).width();
+        var headerHight = 65;
+        jQuery("a[href^=#]").click(function () {
+          var speed = 1000;
+          var href = jQuery(this).attr("href");
+          var target = jQuery(href == "#" || href == "" ? "html" : href);
+          var position = target.offset().top - headerHight;
+          jQuery("body,html").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

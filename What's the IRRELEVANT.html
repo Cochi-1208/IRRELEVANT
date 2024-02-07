@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="baseStyle.css" />
+  </head>
+  <body>
+    <header>
+      <a href="home.html"
+        ><img id="topLogoImg" src="medias/Irrelevant's_mainLogo.png"
+      /></a>
+    </header>
+
+    <div class="newsBody">
+      <h2>What's The IRRELEVANT</h2>
+      <img class="thumbnail" src="thumbnail/Irrelevant's_mainLogo.png" alt="" />
+      <p>
+        IRRELEVANTは、チームIRRELEVANTによって運営される情報掲示板で、チームIRRELEVANTに関する情報が随時掲載されています。
+      </p>
+      <img
+        class="thumbnail"
+        src="thumbnail/scrOfIrerelevant'sDisplay.jpg"
+        alt=""
+      />
+      <p>
+        情報は上記の画像のようにコンパクトなタグにまとめられており、そのジャンルごとに分けられています。クリックすることでより詳しい情報を閲覧することも可能です。閲覧したい情報を探し、情報を収集してみてください。
+      </p>
+    </div>
+    <footer><p>Copyright © 2023 by Team IRRELEVANT</p></footer>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      jQuery(function () {
+        var windowWidth = $(window).width();
+        var headerHight = 65;
+        jQuery("a[href^=#]").click(function () {
+          var speed = 1000;
+          var href = jQuery(this).attr("href");
+          var target = jQuery(href == "#" || href == "" ? "html" : href);
+          var position = target.offset().top - headerHight;
+          jQuery("body,html").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

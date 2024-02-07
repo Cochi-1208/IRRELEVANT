@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="baseStyle.css" />
+  </head>
+  <body>
+    <header>
+      <a href="home.html"
+        ><img id="topLogoImg" src="medias/Irrelevant's_mainLogo.png"
+      /></a>
+    </header>
+    <div class="newsBody" id="日本語での配信へと変更となりました。">
+      <h2>日本語での配信へと変更となりました。</h2>
+      <img class="thumbnail" src="thumbnail/Irrelevant's_mainLogo.png" alt="" />
+      <p>
+        この度IRRELEVANTでは、日本語での情報発信へと完全移行しました。<br />今後すべてのタグ名や文章は日本語での配信となります。
+      </p>
+    </div>
+    <div class="newsBody" id="Optimized the layout with the header in mind.">
+      <h2>Optimized the layout with the header in mind.</h2>
+      <!-- <img class="thumbnail" src="" alt="" /> -->
+      <p>ヘッダーを考慮してレイアウトを最適化しました。</p>
+    </div>
+    <div
+      class="newsBody"
+      id="Changed date tag specifications when tag name breaks."
+    >
+      <h2>Changed date tag specifications when tag name breaks.</h2>
+      <img
+        class="thumbnail"
+        src="thumbnail/Changed date tag specifications when tag name breaks.jpg"
+        alt=""
+      />
+      <p>
+        タグ名がページ幅に合わせ改行が行われるとき、日付タグの丸枠が変形していた仕様を変更し、改行済みかどうかに関係なく同じ形を維持するようになりました。
+      </p>
+    </div>
+    <div class="newsBody" id="The first page of IRRELEVANT.">
+      <h2>The first page of IRRELEVANT</h2>
+      <img class="thumbnail" src="thumbnail/Irrelevant's_mainLogo.png" alt="" />
+      <p>
+        IRRELEVANTの記念すべき最初のページが完成しました。<br />IRRELEVANTではKonoeの開発段階での最新情報やCochi_1208に関する情報など、チームIRRELEVANT内の情報のほとんどを共有することができます。
+      </p>
+    </div>
+    <div class="newsBody" id="Hello, this is a test sentence.">
+      <h2>Hello, this is a test sentence.</h2>
+      <!-- <img class="thumbnail" src="" alt="" /> -->
+      <p>Hello, this is a test sentence.</p>
+    </div>
+    <footer><p>Copyright © 2023 by Team IRRELEVANT</p></footer>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      jQuery(function () {
+        var windowWidth = $(window).width();
+        var headerHight = 65;
+        jQuery("a[href^=#]").click(function () {
+          var speed = 1000;
+          var href = jQuery(this).attr("href");
+          var target = jQuery(href == "#" || href == "" ? "html" : href);
+          var position = target.offset().top - headerHight;
+          jQuery("body,html").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

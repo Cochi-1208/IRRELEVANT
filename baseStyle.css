@@ -1,0 +1,169 @@
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(5, 5, 5);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  text-align: center;
+
+  background-color: rgb(5, 5, 5);
+  width: 100%;
+  border-bottom: solid rgb(44, 44, 44) 2px;
+}
+
+#headerUl {
+  display: flex;
+  padding: 0;
+}
+.headerLi {
+  list-style: none;
+  margin: auto;
+}
+.headerA {
+  text-decoration: none;
+  color: white;
+}
+#headerInput {
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 120%;
+  position: relative;
+}
+
+#smallWindow {
+  position: absolute;
+  top: 124px;
+  right: 3px;
+  background: linear-gradient(0, rgba(5, 5, 5, 0.75), rgb(5, 5, 5));
+  color: white;
+  width: 360px;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+  z-index: 100000;
+}
+.smallWindowUl {
+  padding: 0;
+}
+.smallWindowLi {
+  display: flex;
+  border: solid 2px rgb(44, 44, 44);
+  background-color: rgb(5, 5, 5);
+  padding: 5px 1rem 4px 3px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.smallWindowLi:hover {
+  background-color: rgb(129, 129, 129);
+}
+#topLogoImg {
+  height: 56px;
+}
+
+#flexer {
+  display: flex;
+  border-top: solid 2px rgb(44, 44, 44);
+  border-bottom: solid 2px rgb(44, 44, 44);
+  margin-top: 118px;
+}
+main {
+  text-align: center;
+  margin: auto;
+  width: auto;
+  color: white;
+}
+side {
+  display: inline;
+  width: 480px;
+  max-width: 25%;
+  border-left: solid 2px rgb(44, 44, 44);
+  text-align: center;
+  margin: auto;
+  position: sticky;
+  top: 20px;
+  padding-left: 4%;
+  padding-right: 0;
+}
+.cards {
+  text-decoration: none;
+  color: white;
+  margin: auto;
+}
+.cards :hover {
+  background-color: rgb(129, 129, 129);
+}
+.genre {
+  border: solid 2px rgb(44, 44, 44);
+  padding: 0 2px 0 2px;
+  margin-bottom: 1rem;
+}
+h2 {
+  color: white;
+}
+.bigTag {
+  color: white;
+}
+dl {
+  display: flex;
+  border: solid 2px rgb(44, 44, 44);
+  padding: 5px 1rem 4px 3px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+dt {
+  border: solid 1px rgb(129, 129, 129);
+  border-radius: 15px;
+  padding: 0 1rem 0 1rem;
+  margin-bottom: auto;
+  color: darkorange;
+}
+dd {
+  margin-left: 0.8rem;
+}
+.newsBody {
+  margin: auto;
+  margin-bottom: 20px;
+  color: white;
+  width: 80%;
+  max-width: 480px;
+  padding-top: 80px;
+}
+.thumbnail {
+  width: 80%;
+  margin: 10%;
+  border: solid 2px rgb(44, 44, 44);
+  border-radius: 5px;
+  padding-bottom: 0;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  vertical-align: top;
+}
+.green {
+  color: aqua;
+}
+.codeWindow {
+  font-size: small;
+  color: grey;
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding: 1rem;
+}
+footer {
+  border-top: solid 2px rgb(44, 44, 44);
+  text-align: center;
+  color: rgb(129, 129, 129);
+}
+@media screen and (max-width: 960px) {
+  side {
+    display: none;
+  }
+}
